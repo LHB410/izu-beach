@@ -3,12 +3,16 @@ class Api::V1::BeachesController < ApplicationController
   def index
     @beaches = Beach.all
 
-    render json: @beaches, location: api_v1_beaches_path(@beaches)
+    render json: @beaches, include:
+      [:reviews => {only: [:title, :content, :rating, :screen_name]} ],
+    location: api_v1_beaches_path(@beaches)
   end
 
   def show
     @review = Review.new
-    render json: @beach, location: api_v1_beach_path(@beach)
+    render json: @beach, include:
+      [:reviews => {only: [:title, :content, :rating, :screen_name]} ],
+      location: api_v1_beach_path(@beach)
   end
 
   private
