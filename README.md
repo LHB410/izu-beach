@@ -1,5 +1,5 @@
 # Izu Beaches
->> under construction!
+> 🏖️ under construction! 🏖️
 <!-- >> Outline a brief description of your project.
 > Live demo [_here_](https://www.example.com).
 
