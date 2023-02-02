@@ -1,7 +1,9 @@
+import './Homepage.css'
+
 export const Homepage = () => {
   return (
     <>
-      <h1>Hello World!</h1>
+      <h1>This is the homepage!</h1>
     </>
   )
 }
