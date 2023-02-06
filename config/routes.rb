@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/api/v1/search", to: "api/v1/beaches#search"
+  post "/api/v1/search", to: "api/v1/beaches#search"
   namespace :api do
     namespace :v1 do
       resources :beaches, only: [:index, :show] do

@@ -1,18 +1,24 @@
 class Api::V1::BeachesController < ApplicationController
-  before_action :set_beach, only: [:show]
-  def index
-    @beaches = Beach.all
+  before_action :set_beach, only: %i[show]
 
-    render json: @beaches, include:
+  def index
+      @beaches = Beach.all
+      render json: @beaches, include:
       [:reviews => {only: [:title, :content, :rating, :screen_name]} ],
-    location: api_v1_beaches_path(@beaches)
+      location: api_v1_beaches_path(@beaches)
   end
 
   def show
     @review = Review.new
+
     render json: @beach, include:
       [:reviews => {only: [:title, :content, :rating, :screen_name]} ],
       location: api_v1_beach_path(@beach)
+  end
+
+  def search
+    @beaches = Beach.where("address like ? OR name like ?", "%#{params[:q]}%", "%#{params[:q]}%")
+    render json: @beaches
   end
 
   private
