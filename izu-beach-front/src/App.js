@@ -3,7 +3,6 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { Container, Navbar } from 'react-bootstrap';
 import { Homepage } from './components/Homepage/Homepage';
 import { About } from './components/About/About'
-import axios from 'axios';
 
 function App() {
 

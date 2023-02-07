@@ -1,44 +1,56 @@
-import React, { Component } from "react";
-import axios from "axios";
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { Card } from 'react-bootstrap';
 
-class BeachesList extends Component{
-  constructor(props) {
-      super(props);
-      this.state = {
-        beachlists: [],
-      };
-    }
+export default function BeachSearch() {
+  const [searchInput, setSearchInput] = useState('');
+  const [APIData, setAPIData] = useState([])
+  const [filteredResults, setFilteredResults] = useState([]);
+    useEffect(() => {
+        axios.get(`/api/v1/beaches`)
+            .then((response) => {
+                setAPIData(response.data);
+            })
+    }, [])
 
-  loadBeachesList() {
-  axios
-    .get("/api/v1/beaches")
-    .then((res) => {
-      this.setState({ beachlists: res.data });
-      console.log(res.data);
-    })
-    .catch((error) => console.log(error));
-
+  const searchItems = (searchValue) => {
+    setSearchInput(searchValue)
+    if (searchInput !== '') {
+    const filteredData = APIData.filter((item) => {
+            return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+        })
+        setFilteredResults(filteredData)
+    } else {
+        setFilteredResults(APIData)
+      }
   }
 
-  componentDidMount() {
-    this.loadBeachesList();
-  }
+  return (
+    <div style={{ padding: 20 }}>
+        <input icon='search'
+            placeholder='Search a location!'
+            onChange={(e) => searchItems(e.target.value)}>
+        </input>
 
-
-  render(){
-    return(
-      <ul>
-        {this.state.beachlists.map((beachlist) => {
-          return (
-            <li className="item" beachlist={beachlist} key={beachlist.id}>
-              <label className="itemDisplay">{beachlist.name}</label>
-            </li>
-          );
-        })}
-      </ul>
-    )
-  }
-
+        {searchInput.length > 1 ? (
+          filteredResults.map((item) => {
+            return (
+              <Card>
+                {item.name}
+                {item.description}
+              </Card>
+            )
+          })
+        ) : (
+          APIData.map((item) => {
+              return (
+                  <Card>
+                    {item.name}
+                    {item.description}
+                  </Card>
+              )
+          })
+      )}
+    </div>
+  )
 }
-
-export default BeachesList
