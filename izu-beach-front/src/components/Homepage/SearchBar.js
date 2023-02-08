@@ -1,12 +1,24 @@
-import React from "react"
+import { Form } from "react-bootstrap"
+import React from 'react';
 
-export default function SearchBar(searchItems) {
+
+function SearchBar({searchItems}) {
 
   return(
-    <input icon='search'
-        placeholder='Search a location!'
-        onChange={(e) => searchItems(e.target.value)}>
-    </input>
+    <div>
+      <Form className="d-flex mx-4">
+        <Form.Control
+          icon="search"
+          type="search"
+          placeholder='Search a location!'
+          onChange={(e) => searchItems(e.target.value)}
+          className="me-2"
+          aria-label="Search"
+        />
+      </Form>
+    </div>
+
   )
 }
-// currently not working...
+
+export default SearchBar
