@@ -1,0 +1,29 @@
+@import './Variables.scss';
+
+.navbar {
+  background-color: $ocean-blue;
+
+  // position: relative;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding-top: 0.5rem;
+  // padding-bottom: 0.5rem;
+  // justify-content: flex-start;
+}
+
+.nav-link {
+  color: $sandy-black
+  // display: inline-block;
+  // padding: 0.5rem 1rem;
+  // text-decoration: none;
+  // transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+@media(min-width: $mobile-breakpoint) {
+  .navbar{
+    .navlink{
+      display: none;
+      }
+  }
+}
