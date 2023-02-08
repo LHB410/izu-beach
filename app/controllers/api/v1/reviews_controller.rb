@@ -4,8 +4,11 @@ class Api::V1::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.beach = @beach
-    @review.save
-    render json: @review, status: :created, location: api_v1_beach_reviews_path(@reviews)
+    if @review.save
+      render json: @review, status: :created, location: api_v1_beach_path(@beach)
+    else
+      render json: @beach, status: :unprocessable_entity, location: api_v1_beaches_path
+    end
   end
 
   private

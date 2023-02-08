@@ -6,6 +6,7 @@ import { About } from './components/About/About';
 // import { Navbar } from './components/Navbar/Navbar';
 
 function App() {
+
   return (
     <div className="App">
       <Navbar className="Navbar">
