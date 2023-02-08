@@ -1,13 +1,15 @@
 // Override default variables before the import
-$mobile-breakpoint: 992px;
 
-$ocean-blue: #C9DDE9;
-$sunset-orange: #E9983E;
-$sandy-black: #4B4242;
+
+// ONLY UNCOMMENT IF OVERRIDING BOOTSTRAP VARIABLES
+// ALL OTHER SEF DECALRED VARIABLES GO IN Variables.scss
+
 
 // Required
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
 
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+// // Import Bootstrap and its default variables
+// @import '~bootstrap/scss/bootstrap.scss';
+
+

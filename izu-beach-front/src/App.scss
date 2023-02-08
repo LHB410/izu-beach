@@ -1,3 +1,10 @@
+//IMPORT ALL STYLE SHEETS TO HERE
+@import "~bootstrap/scss/bootstrap";
+@import './custom.scss';
+@import './style/Navbar.scss';
+@import './style/Variables.scss';
+
+
 .App {
   text-align: center;
 }
