@@ -1,17 +1,19 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
+// import SearchBar from './Homepage/SearchBar';
 
 export default function BeachSearch() {
   const [searchInput, setSearchInput] = useState('');
   const [APIData, setAPIData] = useState([])
   const [filteredResults, setFilteredResults] = useState([]);
-    useEffect(() => {
-        axios.get(`/api/v1/beaches`)
-            .then((response) => {
-                setAPIData(response.data);
-            })
-    }, [])
+
+  useEffect(() => {
+      axios.get(`/api/v1/beaches`)
+          .then((response) => {
+              setAPIData(response.data);
+          })
+  }, [])
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue)
@@ -19,6 +21,7 @@ export default function BeachSearch() {
     const filteredData = APIData.filter((item) => {
             return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
         })
+        console.log(filteredData)
         setFilteredResults(filteredData)
     } else {
         setFilteredResults(APIData)
@@ -27,6 +30,7 @@ export default function BeachSearch() {
 
   return (
     <div style={{ padding: 20 }}>
+        {/* <SearchBar searchItems={searchItems}/> */}
         <input icon='search'
             placeholder='Search a location!'
             onChange={(e) => searchItems(e.target.value)}>
@@ -46,6 +50,7 @@ export default function BeachSearch() {
               return (
                   <Card>
                     {item.name}
+                    <br />
                     {item.description}
                   </Card>
               )
