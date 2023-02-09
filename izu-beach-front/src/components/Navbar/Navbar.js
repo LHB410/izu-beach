@@ -12,7 +12,9 @@ export default function Navbar() {
       <a href="/"><ReactLogo /></a>
       {/* <Nav.Link href="/"><img src="../../images/logo.png" alt="" /></Nav.Link> */}
 
-      <Hamburger toggled={isOpen} toggle={() => setIsOpen(!isOpen)}/>
+      <div id="hamburger">
+        <Hamburger rounded size={40} toggled={isOpen} toggle={() => setIsOpen(!isOpen)}/>
+      </div>
 
       <div className={ isOpen ? "nav-menu expanded" : "nav-menu" }>
         <Nav.Link href="/beaches">Beaches</Nav.Link>
