@@ -1,6 +1,6 @@
-import './Homepage.css'
+import React from 'react';
 
-export const Homepage = () => {
+export default function Homepage(){
   return (
     <>
       <header className="App-header">
