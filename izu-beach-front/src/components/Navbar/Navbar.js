@@ -6,24 +6,26 @@ import axios from 'axios';
 
 export default function Navbar({setSearchResults}) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [filteredResults, setFilteredResults] = useState([]);
   const navigate = useNavigate();
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  useEffect(() => {
-    if (searchQuery) {
-      const fetchResults = async () => {
-        const response = await axios.get(`api/v1/search?p=${searchQuery}`);
-        setSearchResults(response.data);
-        navigate("/beaches")
-      };
-      fetchResults();
-    } else {
-      setSearchResults([]);
-    }
-  }, [searchQuery]);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setFilteredResults([]);
+    setSearchResults([filteredResults]);
+    const response = await axios.get(`api/v1/beaches`);
+    setFilteredResults(
+      response.data.filter(result =>
+        result.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    );
+    setSearchResults(filteredResults);
+    navigate("/beaches");
+  };
 
   return (
     <div className="navbar">
@@ -37,7 +39,7 @@ export default function Navbar({setSearchResults}) {
             navbarScroll
           >
 
-            <Form className="d-flex mx-4">
+            <Form className="d-flex mx-4" onSubmit={handleSubmit}>
               <Form.Control
               icon="search"
               type="search"

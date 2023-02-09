@@ -62,24 +62,43 @@
 
 
 // }
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import BeachCard from '../BeachCard'
+import axios from 'axios';
+
 
 const Beaches = ({ searchResults }) => {
+  const [apiData, setApiData] = useState([]);
+
+  useEffect(() => {
+    if (searchResults.length > 0) {
+      setApiData(searchResults);
+    } else {
+      const fetchData = async () => {
+        const response = await axios.get(`api/v1/beaches`);
+        setApiData(response.data);
+    };
+    fetchData();
+    }
+  }, [searchResults]);
 
   return (
     <div className="beaches">
       <h2>Results</h2>
-      <ul>
-        {searchResults.map((result) => (
-          <BeachCard
-            key={result.id}
-            name={result.name}
-            description={result.description}>
+      {apiData.length > 0 ?(
+        <ul>
+          {apiData.map((result) => (
+            <BeachCard
+              key={result.id}
+              name={result.name}
+              description={result.description}>
 
-          </BeachCard>
-        ))}
-      </ul>
+            </BeachCard>
+          ))}
+        </ul>
+      ) : (
+        <div>No Results Found</div>
+      )}
     </div>
   );
 };
