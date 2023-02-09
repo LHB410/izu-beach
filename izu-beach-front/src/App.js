@@ -1,8 +1,8 @@
 import './App.scss';
 
 import { Routes, Route } from 'react-router-dom'
-import { Homepage } from './components/Homepage/Homepage';
-import { About } from './components/About/About';
+import Homepage from './components/Homepage/Homepage';
+import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
 import Beaches from './components/Beaches/Beaches';
 import React from 'react';

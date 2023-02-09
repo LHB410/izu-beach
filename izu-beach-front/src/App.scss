@@ -1,9 +1,11 @@
 //IMPORT ALL STYLE SHEETS TO HERE
 @import "~bootstrap/scss/bootstrap";
-@import './custom.scss';
-@import './style/Navbar.scss';
+
 @import './style/Variables.scss';
 
+@import './style/Navbar.scss';
+@import './style/About.scss';
+@import './style/Homepage.scss';
 
 .App {
   text-align: center;
