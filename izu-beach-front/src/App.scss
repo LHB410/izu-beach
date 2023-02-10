@@ -1,12 +1,23 @@
 //IMPORT ALL STYLE SHEETS TO HERE
 @import "~bootstrap/scss/bootstrap";
-@import './custom.scss';
-@import './style/Navbar.scss';
+
 @import './style/Variables.scss';
+
+@import './style/Navbar.scss';
+@import './style/About.scss';
+@import './style/Homepage.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .App-logo {
