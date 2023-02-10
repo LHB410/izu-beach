@@ -28,7 +28,6 @@ export default function Navbar({setSearchResults}) {
   };
 
 
-
   return (
     <Nav className="navbar">
       <a href="/"><ReactLogo /></a>
