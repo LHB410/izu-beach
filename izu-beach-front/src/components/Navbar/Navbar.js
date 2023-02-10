@@ -1,11 +1,32 @@
-import React, { useState } from 'react';
-import { Nav } from 'react-bootstrap';
+import {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+import { Nav, Form} from 'react-bootstrap';
 import Hamburger from 'hamburger-react'
 import {ReactComponent as ReactLogo} from '../../logo.svg';
+import axios from 'axios';
 
 
-export default function Navbar() {
+export default function Navbar({setSearchResults}) {
+  const [searchQuery, setSearchQuery] = useState('');
   const [ isOpen, setIsOpen ] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await axios.get(`api/v1/beaches`);
+    const filteredResults =(
+      response.data.filter(result =>
+        result.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    );
+    setSearchResults(filteredResults);
+    navigate("/beaches");
+  };
+
 
   return (
     <Nav className="navbar">
@@ -17,10 +38,24 @@ export default function Navbar() {
       </div>
 
       <div className={ isOpen ? "nav-menu expanded" : "nav-menu" }>
-        <Nav.Link href="/beaches">Beaches</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/contribute" disabled >Contribute</Nav.Link>
+
+        <Form className="d-flex mx-4" onSubmit={handleSubmit}>
+          <Form.Control
+            icon="search"
+            type="search"
+            placeholder="Search a location!"
+            className="me-2"
+            aria-label="Search"
+            value={searchQuery}
+            onChange={handleSearchInputChange}
+          />
+        </Form>
+
+        <Nav.Link as={Link} to="/beaches">Beaches</Nav.Link>
+        <Nav.Link as={Link} to="/about">About</Nav.Link>
+        <Nav.Link as={Link} to="/contribute" >Contribute</Nav.Link>
       </div>
+
     </Nav>
   )
 }

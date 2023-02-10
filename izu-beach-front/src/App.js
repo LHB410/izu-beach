@@ -1,6 +1,5 @@
 import './App.scss';
-
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Homepage from './components/Homepage/Homepage';
 import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
