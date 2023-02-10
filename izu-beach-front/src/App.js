@@ -4,20 +4,19 @@ import Homepage from './components/Homepage/Homepage';
 import About from './components/About/About';
 import Navbar from './components/Navbar/Navbar';
 import Beaches from './components/Beaches/Beaches';
-import { useState } from 'react';
-
+import React from 'react';
 
 function App() {
-  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="App">
-      <Navbar  setSearchResults={setSearchResults}/>
+        <Navbar />
+
     {/* below is routing example */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/beaches" element={<Beaches searchResults={searchResults} />} />
+        <Route path="/beaches" element={<Beaches />} />
       </Routes>
     </div>
   );
