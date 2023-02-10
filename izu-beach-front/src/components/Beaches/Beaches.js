@@ -1,55 +1,43 @@
+import React, {useState, useEffect} from 'react';
+import BeachCard from '../BeachCard'
 import axios from 'axios';
-import React, { useState, useEffect  } from 'react';
-import SearchBar from '../Homepage/SearchBar';
-import BeachCard from '../BeachCard';
 
-export default function Beaches() {
-  const [searchInput, setSearchInput] = useState('');
-  const [APIData, setAPIData] = useState([]);
-  const [filteredResults, setFilteredResults] = useState([]);
+
+const Beaches = ({ searchResults }) => {
+  const [apiData, setApiData] = useState([]);
+
 
   useEffect(() => {
-      axios.get(`/api/v1/beaches`)
-          .then((response) => {
-              setAPIData(response.data);
-          })
-  }, [])
-
-  const searchItems = (searchValue) => {
-    setSearchInput(searchValue)
-    if (searchInput !== '') {
-    const filteredData = APIData.filter((item) => {
-            return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-        })
-        console.log(filteredData)
-        setFilteredResults(filteredData)
+    if (searchResults !== '') {
+      setApiData(searchResults);
     } else {
-        setFilteredResults(APIData)
-      }
-  }
+       axios.get(`/api/v1/beaches`)
+        .then((response) => {
+            setApiData(response.data);
+        })
+    }
+  }, []);
 
   return (
-    <div>
-        <SearchBar searchItems={searchItems}/>
+    <div className="beaches">
+      <h2>Results</h2>
+      {searchResults.length > 0 ?(
+        <ul>
+          {searchResults.map((result) => (
+            <BeachCard
+              key={result.id}
+              name={result.name}
+              description={result.description}>
 
-        {searchInput.length > 1 ? (
-          filteredResults.map((item) => {
-            return (
-              <BeachCard name={item.name} description={item.description} key={item.id}>
-              </BeachCard>
-            )
-          })
-        ) : (
-          APIData.map((item) => {
-              return (
-
-                <BeachCard name={item.name} description={item.description} key={item.id}>
-                </BeachCard>
-              )
-          })
+            </BeachCard>
+          ))}
+      </ul>
+      ) : (
+        <div>No Results Found</div>
       )}
+
     </div>
-  )
+  );
+};
 
-
-}
+export default Beaches;
