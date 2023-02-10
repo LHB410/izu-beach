@@ -1,12 +1,11 @@
 import {  Link, useNavigate } from 'react-router-dom'
 import { Container, Nav, Form} from 'react-bootstrap';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 
 export default function Navbar({setSearchResults}) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredResults, setFilteredResults] = useState([]);
   const navigate = useNavigate();
 
   const handleSearchInputChange = (event) => {
@@ -15,10 +14,8 @@ export default function Navbar({setSearchResults}) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setFilteredResults([]);
-    setSearchResults([filteredResults]);
     const response = await axios.get(`api/v1/beaches`);
-    setFilteredResults(
+    const filteredResults =(
       response.data.filter(result =>
         result.name.toLowerCase().includes(searchQuery.toLowerCase())
       )
