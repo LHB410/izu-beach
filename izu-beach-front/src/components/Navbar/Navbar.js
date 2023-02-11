@@ -31,7 +31,6 @@ export default function Navbar({setSearchResults}) {
   return (
     <Nav className="navbar">
       <a href="/"><ReactLogo /></a>
-      {/* <Nav.Link href="/"><img src="../../images/logo.png" alt="" /></Nav.Link> */}
 
       <div id="hamburger">
         <Hamburger rounded size={40} toggled={isOpen} toggle={() => setIsOpen(!isOpen)}/>
@@ -39,7 +38,7 @@ export default function Navbar({setSearchResults}) {
 
       <div className={ isOpen ? "nav-menu expanded" : "nav-menu" }>
 
-        <Form className="d-flex mx-4" onSubmit={handleSubmit}>
+        <Form className="d-flex mx-4" id="nav-search" onSubmit={handleSubmit}>
           <Form.Control
             icon="search"
             type="search"
