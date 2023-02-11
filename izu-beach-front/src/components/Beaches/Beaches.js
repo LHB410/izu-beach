@@ -16,7 +16,7 @@ const Beaches = ({ searchResults }) => {
             setApiData(response.data);
         })
     }
-  }, [])
+  }, []);
 
   return (
     <div className="beaches">
