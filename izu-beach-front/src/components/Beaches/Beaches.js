@@ -8,22 +8,22 @@ const Beaches = ({ searchResults }) => {
 
 
   useEffect(() => {
-    if (searchResults !== '') {
+    if (searchResults.length > 0) {
       setApiData(searchResults);
     } else {
-       axios.get(`/api/v1/beaches`)
+      axios.get(`/api/v1/beaches`)
         .then((response) => {
-            setApiData(response.data);
+          setApiData(response.data);
         })
     }
-  }, []);
+  }, [searchResults]);
 
   return (
     <div className="beaches">
       <h2>Results</h2>
       {searchResults.length > 0 ?(
         <ul>
-          {searchResults.map((result) => (
+          {apiData.map((result) => (
             <BeachCard
               key={result.id}
               name={result.name}
@@ -33,7 +33,18 @@ const Beaches = ({ searchResults }) => {
           ))}
       </ul>
       ) : (
-        <div>No Results Found</div>
+        <div>
+          <ul>
+            {apiData.map((result) => (
+              <BeachCard
+                key={result.id}
+                name={result.name}
+                description={result.description}>
+
+              </BeachCard>
+            ))}
+          </ul>
+        </div>
       )}
 
     </div>
