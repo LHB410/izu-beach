@@ -38,7 +38,7 @@ export default function Navbar({setSearchResults}) {
 
       <div className={ isOpen ? "nav-menu expanded" : "nav-menu" }>
 
-        <Form className="d-flex mx-4" id="nav-search" onSubmit={handleSubmit}>
+        <Form className="d-flex mx-4" id="nav-search" onSubmit={handleSubmit} >
           <Form.Control
             icon="search"
             type="search"
@@ -50,9 +50,9 @@ export default function Navbar({setSearchResults}) {
           />
         </Form>
 
-        <Nav.Link as={Link} to="/beaches">Beaches</Nav.Link>
-        <Nav.Link as={Link} to="/about">About</Nav.Link>
-        <Nav.Link as={Link} to="/contribute" >Contribute</Nav.Link>
+        <Nav.Link as={Link} to="/beaches" onClick={() => setIsOpen(!isOpen)} >Beaches</Nav.Link>
+        <Nav.Link as={Link} to="/about" onClick={() => setIsOpen(!isOpen)} >About</Nav.Link>
+        <Nav.Link as={Link} to="/contribute" onClick={() => setIsOpen(!isOpen)} >Contribute</Nav.Link>
       </div>
 
     </Nav>
