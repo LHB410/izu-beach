@@ -32,29 +32,27 @@ export default function Navbar({setSearchResults}) {
     <Nav className="navbar">
       <a href="/"><ReactLogo /></a>
 
+      <Form className="d-flex" id="nav-search" onSubmit={handleSubmit} >
+        <Form.Control
+          icon="search"
+          type="search"
+          placeholder="Search a location!"
+          className="me-2"
+          aria-label="Search"
+          value={searchQuery}
+          onChange={handleSearchInputChange}
+        />
+      </Form>
+
       <div id="hamburger">
         <Hamburger rounded size={40} toggled={isOpen} toggle={() => setIsOpen(!isOpen)}/>
       </div>
 
       <div className={ isOpen ? "nav-menu expanded" : "nav-menu" }>
-
-        <Form className="d-flex mx-4" id="nav-search" onSubmit={handleSubmit} >
-          <Form.Control
-            icon="search"
-            type="search"
-            placeholder="Search a location!"
-            className="me-2"
-            aria-label="Search"
-            value={searchQuery}
-            onChange={handleSearchInputChange}
-          />
-        </Form>
-
         <Nav.Link as={Link} to="/beaches" onClick={() => setIsOpen(!isOpen)} >Beaches</Nav.Link>
         <Nav.Link as={Link} to="/about" onClick={() => setIsOpen(!isOpen)} >About</Nav.Link>
         <Nav.Link as={Link} to="/contribute" onClick={() => setIsOpen(!isOpen)} >Contribute</Nav.Link>
       </div>
-
     </Nav>
   )
 }

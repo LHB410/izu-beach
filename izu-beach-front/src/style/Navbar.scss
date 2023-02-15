@@ -1,5 +1,6 @@
 .navbar {
   background-color: $ocean-blue;
+  flex-wrap: nowrap;
 }
 
 .nav-menu {
@@ -14,19 +15,26 @@
   }
 }
 
+// .nav-menu-container {
+//   max-width: 100%;
+
+// }
+
 .nav-menu.expanded {
   display: block;
   position: absolute;
   top: 95px;
+  left: 0;
   width: 100%;
   flex-direction: column;
   width: 100%;
   background-color: $ocean-blue;
   padding-bottom: 0.5em;
+}
 
-  #nav-search {
-    margin: 15px 0;
-  }
+#nav-search {
+  width: 100%;
+  margin: 15px 0;
 }
 
 #hamburger {
@@ -53,6 +61,11 @@
 
     #hamburger {
       display: none;
+    }
+
+    #nav-search {
+      max-width: 20%;
+      margin-left: auto;
     }
   }
 }
