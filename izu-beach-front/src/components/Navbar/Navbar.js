@@ -25,6 +25,7 @@ export default function Navbar({setSearchResults}) {
     );
     setSearchResults(filteredResults);
     navigate("/beaches");
+    setIsOpen(!isOpen);
   };
 
 
