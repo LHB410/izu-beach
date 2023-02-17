@@ -5,6 +5,7 @@ class Beach < ApplicationRecord
   validates :bbq_friendly, :parking, inclusion: [true, false]
 
 
+
   include PgSearch::Model
   pg_search_scope :search_by_term, against: [ :name, :address ],
   using: {

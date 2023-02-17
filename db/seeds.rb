@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -16,8 +17,10 @@ Beach.destroy_all
     address: Faker::Address.full_address,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ut sunt exercitationem quia officia est reiciendis, blanditiis incidunt tempore eos maxime necessitatibus voluptatem perspiciatis beatae voluptates eligendi vitae iste sint",
     parking: [true, false].sample,
-    bbq_friendly: [true, false].sample
+    bbq_friendly: [true, false].sample,
+    image_url: "http://source.unsplash.com/1600x900/?beach&format=webp"
   )
+
   5.times do
     beach.reviews.create!(
       title: ["Great", "Wonderful!", "Awful", "Best beach ever!", "Worst day of my life", "Too much sand.."].sample,
