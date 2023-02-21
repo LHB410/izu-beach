@@ -27,7 +27,10 @@ const Beaches = ({ searchResults }) => {
             <BeachCard
               key={result.id}
               name={result.name}
-              description={result.description}>
+              description={result.description}
+              parking={result.parking}
+              bbq_friendly={result.bbq_friendly}
+              reviews={result.reviews}>
 
             </BeachCard>
           ))}
@@ -39,8 +42,10 @@ const Beaches = ({ searchResults }) => {
               <BeachCard
                 key={result.id}
                 name={result.name}
-                description={result.description}>
-
+                description={result.description}
+                parking={result.parking}
+                bbq_friendly={result.bbq_friendly}
+                reviews={result.reviews}>
               </BeachCard>
             ))}
           </ul>

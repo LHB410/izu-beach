@@ -18,7 +18,7 @@ class Api::V1::BeachesController < ApplicationController
 
   def search
     @beaches = Beach.where("address like ? OR name like ?", "%#{params[:q]}%", "%#{params[:q]}%")
-    render json: @beaches
+    render json: @beaches, location: api_v1_search_path(@beaches)
   end
 
   private
