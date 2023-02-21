@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Kawazu Beach",
+    "address": "Kawazu, Kamo District, Shizuoka 413-0501, Japan",
+    "description": "Kawazu Beach is a beautiful sandy beach with crystal-clear water and scenic views. It's a popular spot for swimming, sunbathing, and beach sports.",
+    "bbq_friendly": true,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "Kawazu Beach is a perfect spot for a day of fun in the sun with family and friends. The beach is clean, the water is crystal-clear, and the scenery is breathtaking. I highly recommend this beach!"
+    },
+    {
+      "content": "I had a great time at Kawazu Beach. The sand is soft and the water is warm and inviting. It's the perfect place to relax and unwind."
+    },
+    {
+      "content":  "Kawazu Beach is one of the best beaches I've been to in Japan. The scenery is amazing, and the water is perfect for swimming and snorkeling. I also appreciate the beach's facilities and amenities."
+    },
+    {
+      "content": "If you're looking for a beautiful, serene beach, Kawazu Beach is the perfect choice. It's not too crowded, and the water is calm and clear. I had a wonderful time here."
+    },
+    {
+      "content": "Kawazu Beach is a hidden gem in the Izu Peninsula. The sand is soft and the water is crystal-clear. It's a great place to swim, sunbathe, or just relax and enjoy the beautiful scenery."
+    }]
+  },
+
+  {
+    "name": "Shirahama Beach",
+    "address": "Shirahama, Shimoda, Shizuoka 415-0012, Japan",
+    "description": "Shirahama Beach is a long, wide beach with soft white sand and calm water. It's a great spot for swimming, surfing, and sunbathing. The beach is surrounded by scenic cliffs and rock formations.",
+    "bbq_friendly": true,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "Shirahama Beach is one of the most beautiful beaches in Japan. The white sand and turquoise water create a breathtaking backdrop. It's a great place to relax, swim, and soak up the sun."
+    },
+    {
+      "content": "I love visiting Shirahama Beach. The water is warm and inviting, and the sand is so soft. The view of the mountains and sea is truly stunning."
+    },
+    {
+      "content": "If you're looking for a picture-perfect beach, Shirahama Beach is it. The water is crystal-clear and the sand is so white. It's the perfect place to spend a day in the sun."
+    },
+    {
+      "content": "Shirahama Beach is a must-visit for beach lovers. The scenery is stunning, and the water is perfect for swimming and snorkeling. I highly recommend this beach."
+    },
+    {
+      "content":  "I had an amazing time at Shirahama Beach. The water is calm and clear, and the sand is so soft. It's a great place to relax and soak up the sun, or take a dip in the sea."
+    }]
+  },
+
+  {
+    "name": "Irita Beach",
+    "address": "Irita, Higashiizu, Kamo District, Shizuoka 413-0302, Japan",
+    "description": "Irita Beach is a small, quiet beach with clear water and gentle waves. It's a great spot for swimming and relaxing in the sun. The beach is surrounded by lush greenery and scenic cliffs.",
+    "bbq_friendly": false,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "Irita Beach is a great spot for a family day trip. The beach is clean, the water is calm, and the facilities are well-maintained. I highly recommend this beach!"
+    },
+    {
+      "content": "I had a wonderful time at Irita Beach. The water is crystal-clear, and the sand is so soft. It's a great place to relax and unwind with family and friends."
+    },
+    {
+      "content": "If you're looking for a peaceful, secluded beach, Irita Beach is a great choice. The scenery is beautiful, and the water is perfect for swimming and kayaking. I highly recommend this beach."
+    },
+    {
+      "content": "Irita Beach is a hidden gem in the Izu Peninsula. The sand is soft and the water is so clear. It's a great place to unwind and enjoy the beautiful scenery."
+    },
+    {
+      "content": "I loved visiting Irita Beach. The water is calm and perfect for swimming, and the sand is so soft. It's a great place to relax and soak up the sun."
+    }]
+  },
+
+  {
+    "name": "Toji Beach",
+    "address": "Toji, Higashiizu, Kamo District, Shizuoka 413-0302, Japan",
+    "description": "Toji Beach is a scenic beach with crystal-clear water and soft sand. It's a popular spot for swimming, snorkeling, and beach sports. The beach is surrounded by scenic cliffs and rock formations.",
+    "bbq_friendly": true,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    "reviews": [  {"content": "Toji Beach is a great place to spend a day in the sun. The water is clear and the sand is so soft. It's a great place to swim, sunbathe, or just relax and enjoy the scenery.",
+    rating}  "I had a wonderful time at Toji Beach. The water is calm and perfect for swimming, and the sand is so soft and clean. It's a great place to unwind and relax.",  "Toji Beach is a must-visit if you're in the Izu Peninsula. The scenery is breathtaking, and the water is crystal-clear. I highly recommend this beach.",  "If you're looking for a quiet, peaceful beach, Toji Beach is a great option. The water is calm and perfect for swimming, and the sand is so soft. It's a great place to relax and enjoy the beautiful surroundings.",  "I love visiting Toji Beach. The scenery is stunning, and the water is perfect for swimming and snorkeling. It's a great place to spend a day in the sun with family and friends."]
+
+  },
+  {
+    "name": "Tatadohama Beach",
+    "address": "Tatadohama, Shimoda, Shizuoka 415-0033, Japan",
+    "description": "Tatadohama Beach is a picturesque beach with clear water and soft sand. It's a great spot for swimming and sunbathing. The beach is surrounded by lush greenery and scenic cliffs.",
+    "bbq_friendly": true,
+    "parking": false,
+    "reviews": [
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+        {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+        {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+        {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+        {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+  ]
+    "reviews": [
+      {"content": "[  "Tatadohama Beach is one of the most beautiful beaches in the Izu Peninsula. The water is crystal-clear, and the sand is so soft. It's a great place to relax and enjoy the stunning scenery.",  "I had a great time at Tatadohama Beach. The water is calm and perfect for swimming, and the sand is so soft and clean. It's a great place to unwind and enjoy the beautiful surroundings.",  "If you're looking for a quiet, peaceful beach, Tatadohama Beach is a great option. The water is clear and perfect for swimming, and the sand is so soft. It's a great place to relax and enjoy the scenery.",  "Tatadohama Beach is a hidden gem in the Izu Peninsula. The scenery is breathtaking, and the water is perfect for swimming and snorkeling. I highly recommend this beach.",  "I love visiting Tatadohama Beach. The sand is so soft, and the water is crystal-clear. It's a great place to relax and unwind, or take a dip in the sea."]
+"}
+    ]
+  },
+  {
+    "name": "Kisami Ohama Beach",
+    "address": "Kisami, Shimoda, Shizuoka 415-0028, Japan",
+    "description": "Kisami Ohama Beach is a popular beach with white sand and turquoise water. It's a great spot for swimming, surfing, and beach activities. The beach is also surrounded by scenic cliffs.",
+    "bbq_friendly": true,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    "reviews": []
+  },
+  {
+    "name": "Koganezaki Crystal Beach",
+    "address": "Koganezaki, Izu, Shizuoka 410-3307, Japan",
+    "description": "Koganezaki Crystal Beach is a hidden gem with clear blue water and white sand. It's a great spot for swimming, snorkeling, and sunbathing. The beach is surrounded by scenic cliffs and has stunning views of the ocean.",
+    "bbq_friendly": false,
+    "parking": true,
+    "image_url": "",
+    "reviews": [
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    {
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+{
+      "content": "I had a wonderful experience at this restaurant. The food was delicious and the service was excellent."
+    },
+    "reviews": []
+  }
+]

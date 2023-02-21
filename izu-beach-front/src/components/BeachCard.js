@@ -6,11 +6,30 @@ export default function BeachCard(props) {
     <div>
 
 
-      <li className="item" key={props.id}>
+      <p className="item" key={props.id}>
+        <hr />
         {props.name}
         <br />
         {props.description}
-      </li>
+        <br />
+        BBQ Friendly: {props.bbq_friendly ? "Yes" : "No"}
+        <br />
+        Parking: {props.parking ? "Yes" : "No"}
+        <br />
+        <br/>
+        {props.parking}
+        Reviews
+        {props.reviews.map(review =>
+        <>
+
+          <br />
+          <span>{review.screen_name} </span>
+          <span>{review.title} </span>
+          <span>{review.rating} </span>
+          <p>{review.content}</p>
+        </>
+        )}
+      </p>
 
     </div>
   )
