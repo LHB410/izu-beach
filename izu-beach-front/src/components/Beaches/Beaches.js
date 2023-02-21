@@ -43,6 +43,8 @@ const Beaches = ({ searchResults }) => {
                 key={result.id}
                 name={result.name}
                 description={result.description}
+                parking={result.parking}
+                bbq_friendly={result.bbq_friendly}
                 reviews={result.reviews}>
               </BeachCard>
             ))}

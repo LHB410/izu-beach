@@ -12,9 +12,9 @@ export default function BeachCard(props) {
         <br />
         {props.description}
         <br />
-        BBQ Friendly: {props.bbq_friendly ? "Yes" : "No"}
+        BBQ Friendly: {props.bbq_friendly === true ? "Yes" : "No"}
         <br />
-        Parking: {props.parking ? "Yes" : "No"}
+        Parking: {props.parking === true ? "Yes" : "No"}
         <br />
         <br/>
         {props.parking}
